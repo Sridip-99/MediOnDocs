@@ -1,5 +1,44 @@
+# -------------------------
+# Python & Django ignores
+# -------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+env/
+myenv/
+
+# Django specific
+*.sqlite3
+media/
+staticfiles/
+static/
+*.pot
+*.pyc
+
+# Secret / Sensitive files
+.env
+*.env
+*.local
+
+# Migrations compiled files
+**/migrations/* 
+!**/migrations/__init__.py
+
+# Cache
+*.cache
+*.mo
+
+# Byte-compiled / optimized files
+*.pyo
+*.pyd
+
+# -------------------------
 # Logs
-logs
+# -------------------------
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -7,18 +46,24 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-.env
-*.local
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+# -------------------------
+# OS / IDE files
+# -------------------------
 .DS_Store
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# VSCode
+.vscode/*
+!.vscode/extensions.json
+
+# -------------------------
+# Backup / Temp files
+# -------------------------
+*.bak
+*.tmp
+.tmp
