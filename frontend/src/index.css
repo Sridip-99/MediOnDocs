@@ -1,15 +1,5 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: 'Montserrat', sans-serif;
-  src: url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-}
-
-@font-face {
-  font-family: "Saira", sans-serif;
-  src: url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
-}
-
 *{
   transition: all 0.3s ease-in-out;
 }
