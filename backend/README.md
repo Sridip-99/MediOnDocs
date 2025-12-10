@@ -50,7 +50,7 @@ This directory contains the Django backend for the MediOnDocs patient portal. It
 ---
 
 ### 📡 API Endpoints
-|===========================================================================================|
+
 |   Method      |            Endpoint               |            Description                |
 | :------------ | :-------------------------------- | :------------------------------------ |
 | **GET**       | `/`                               | Backend server homepage               |
@@ -59,7 +59,6 @@ This directory contains the Django backend for the MediOnDocs patient portal. It
 | **GET**       | `/api/documents/:id/`             | Retrieve metadata for a specific file |
 | **GET**       | `/api/documents/:id/download/`    | Download the actual PDF file          |
 | **DELETE**    | `/api/documents/:id/`             | Delete a file and its record          |
-|===========================================================================================|
 
 ---
 
