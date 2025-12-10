@@ -29,7 +29,7 @@ class DocumentViewSet(viewsets.ModelViewSet):
         serializer = self.get_serializer(instance)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
-    # Custom endpoint for downloading files [cite: 31]
+    # Custom endpoint for downloading files
     @action(detail=True, methods=['get'])
     def download(self, request, pk=None):
         document = self.get_object()

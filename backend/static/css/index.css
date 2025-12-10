@@ -15,7 +15,7 @@ body {
     margin: 0;
     padding: 2rem;
     background: var(--bg-light);
-    font-family: "Segoe UI", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: var(--text-dark);
     text-align: center;
 }
@@ -63,6 +63,7 @@ p {
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
+    font-family: "Saira", sans-serif;
     transition: all 0.25s ease;
 }
 

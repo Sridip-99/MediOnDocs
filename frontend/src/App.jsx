@@ -52,7 +52,10 @@ export default function App() {
 			await uploadDocument(selectedFile);
 			setSelectedFile(null);
 			loadDocs();
-		} catch (err) {}
+			alert("Upload successful!");
+		} catch (err) {
+			alert("Upload failed! Try again.");
+		}
 	};
 
 	const handleDelete = async (id) => {
@@ -61,6 +64,7 @@ export default function App() {
 		try {
 			await deleteDocument(id);
 			setDocuments(prev => prev.filter(doc => doc.id !== id));
+			alert("Delete successful!");
 		} catch (err) {
 			alert("Delete failed! Try again.");
 		}

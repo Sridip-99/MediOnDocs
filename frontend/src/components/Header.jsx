@@ -4,7 +4,7 @@ import { Sun, Moon } from "lucide-react";
 
 export default function Header({ darkMode, toggleDarkMode }) {
     return (
-        <header className="w-full bg-2 flex items-center justify-between px-6 py-4 border-b-1 border-blue-800 shadow-md">
+        <header className="w-full absolute top-0 bg-2 flex items-center justify-between px-6 py-4 border-b-1 border-blue-800 shadow-md">
             <a href="https://mediondocs.netlify.app/">
                 <div className="logo flex items-center justify-center">
                     <div className="logo_container inline-block mr-1 w-8 h-8 rounded-xl overflow-hidden">

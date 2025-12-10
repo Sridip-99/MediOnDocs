@@ -2,13 +2,20 @@
 import React from 'react';
 import { Trash2, Download } from "lucide-react";
 
+// Helper to format date
+  const formatDate = (dateString) => {
+    return new Date(dateString).toLocaleString(); 
+  };
+  
 export default function DisplayFilesUploaded({ documents, handleDelete, getDownloadUrl }) {
     return (
         <div className="overflow-x-auto mt-10 border-2 border-blue-400 rounded-xl overflow-hidden shadow-lg">
             <table className="w-full border-collapse shadow-lg">
                 <thead className="bg-blue-800 text-white">
                     <tr>
+                        <th className="p-3 text-left">ID</th>
                         <th className="p-3 text-left">Filename</th>
+                        <th className="p-3 text-left">Upload Date</th>
                         <th className="p-3 text-left">Size</th>
                         <th className="p-3 text-left">Actions</th>
                     </tr>
@@ -18,8 +25,10 @@ export default function DisplayFilesUploaded({ documents, handleDelete, getDownl
                 <tbody>
                     {documents.map((doc) => (
                         <tr key={doc.id} className="border-b dark:border-gray-700 hover:bg-[var(--tr-hover)]" >
+                            <td className="p-3">{doc.id}</td>
                             <td className="p-3">{doc.filename}</td>
-                            <td className="p-3">{doc.filesize} bytes</td>
+                            <td>{formatDate(doc.created_at)}</td> 
+                            <td>{(doc.filesize / 1024).toFixed(2)} KB</td>
 
 
                             <td className="p-3 flex gap-3">
@@ -42,6 +51,11 @@ export default function DisplayFilesUploaded({ documents, handleDelete, getDownl
                             </td>
                         </tr>
                     ))}
+                    {documents.length === 0 && (
+                        <tr className='h-[120px]'>
+                            <td colSpan="5" style={{ textAlign: 'center' }}>No documents found.</td>
+                        </tr>
+                    )}
                 </tbody>
             </table>
         </div>

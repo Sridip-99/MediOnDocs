@@ -1,16 +1,53 @@
-# React + Vite
+# Frontend - MediOnDocs UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This directory contains the React frontend for the MediOnDocs patient portal. It interacts with the Django backend to provide a user-friendly interface for managing documents.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### ⚙️ Prerequisites
+* Node.js (v14+)
+* npm (Node Package Manager)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🚀 How to Run Locally
 
-## Expanding the ESLint configuration
+1.  **Navigate to the frontend directory:**
+    ```bash
+    cd frontend
+    ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2.  **Install Dependencies:**
+    ```bash
+    npm install
+    ```
+
+3.  **Configure Environment:**
+    Ensure the backend API URL is correctly set.
+    * Create a `.env` file (or rename `.env.example`).
+    * Set the API URL:
+        ```
+        VITE_BACKEND_URL=http://localhost:8000
+        ```
+
+4.  **Start the Development Server:**
+    ```bash
+    npm run dev
+    ```
+    The application will run at `http://localhost:5173/` (or similar port shown in terminal).
+
+---
+
+### 🖥️ Project Structure
+
+* **`src/pages/Home.jsx`**: Main view combining the upload box and file list.
+* **`src/components/UploadBox.jsx`**: Component handling file selection and upload API calls.
+* **`src/components/DisplayFilesUploaded.jsx`**: Component rendering the table of files.
+* **`src/utils/Api.js`**: Centralized Axios instance for backend communication.
+
+---
+
+### 🎨 Features
+* **Real-time Validation:** Checks file type before uploading.
+* **Responsive UI:** Clean interface with a header, footer, and hero section.
+* **Feedback:** Displays success/error messages upon upload completion.
