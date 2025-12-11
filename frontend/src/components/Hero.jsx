@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export default function Hero() {
     return (
-        <section className="text-center py-16 px-4 hero-bg text-white rounded-xl shadow-lg">
+        <section className="mt-16 text-center py-16 px-4 hero-bg text-white rounded-xl shadow-lg">
             <motion.h2
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
